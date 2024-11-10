@@ -1,0 +1,13 @@
+*.d
+*.o
+*.crf
+*.txt
+*.homepea
+*.lst
+*.dep
+*.sct
+*.axf
+*.htm
+*.hex
+*.inp
+*.map
