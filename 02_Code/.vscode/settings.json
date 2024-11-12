@@ -2,6 +2,8 @@
     "files.associations": {
         "proj.h": "c",
         "usart.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "gpio.h": "c",
+        "oscilloscope.h": "c"
     }
 }

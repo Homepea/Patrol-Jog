@@ -60,6 +60,6 @@ void OutPut_Data(float a, float b, float c, float d)
 
     for (i = 0; i < 10; i++)
     {
-        HAL_UART_Transmit(&huart4, (uint8_t *)&databuf, 10, 10);
+        HAL_UART_Transmit_DMA(&huart4, (uint8_t *)&databuf, 10);
     }
 }

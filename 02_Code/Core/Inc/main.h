@@ -59,6 +59,14 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define ADC1_1_ACC_Pin GPIO_PIN_0
 #define ADC1_1_ACC_GPIO_Port GPIOA
+#define MOTOR_L_STOP_Pin GPIO_PIN_2
+#define MOTOR_L_STOP_GPIO_Port GPIOA
+#define MOTOR_L_DIR_Pin GPIO_PIN_3
+#define MOTOR_L_DIR_GPIO_Port GPIOA
+#define MOTOR_R_DIR_Pin GPIO_PIN_6
+#define MOTOR_R_DIR_GPIO_Port GPIOA
+#define MOTOR_R_STOP_Pin GPIO_PIN_7
+#define MOTOR_R_STOP_GPIO_Port GPIOA
 #define HX711_CLK_0_Pin GPIO_PIN_12
 #define HX711_CLK_0_GPIO_Port GPIOB
 #define HX711_DIO_0_Pin GPIO_PIN_13
