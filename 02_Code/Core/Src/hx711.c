@@ -21,9 +21,9 @@ u32 Hx711_Read0(void)
         __nop();
     }
     HX711_SCL_0_H();
-    uiValue  ^= 0x800000; // 第25个脉冲下降沿来时，转换数据
+    uiValue ^= 0x800000; // 第25个脉冲下降沿来时，转换数据
     HX711_SCL_0_L();
-    return (uiValue);
+    return (uiValue >> 4);
 }
 
 u32 Hx711_Read1(void)
@@ -49,5 +49,5 @@ u32 Hx711_Read1(void)
     HX711_SCL_1_H();
     uiValue ^= 0x800000; // 第25个脉冲下降沿来时，转换数据
     HX711_SCL_1_L();
-    return (uiValue);
+    return (uiValue >> 4);
 }
