@@ -9,8 +9,14 @@
 #include "hx711.h"
 #include "oscilloscope.h"
 
+#define SPEED_LOW_PASS_EN       0
 
-#define STOP_THRED          1600
+#define SPEED_TASK_STEP         80
+#define MOTOR_SPEED_MAX         1600        // 默认是3200
+#define ADC_FILTER_FRAME        10
+#define STOP_THRED              1000
+#define SENSOR_THRED            300
+#define SPEED_LOW_PASS_RATIO    20
 
 typedef enum MOTOR_DIR
 {
@@ -31,6 +37,10 @@ typedef struct ST_ROUTE_INFO_T
     u32 uiHx711Ref[2];
     u32 uiHx711Raw[2];
     s32 uiHx711Diff[2];
+    s32 uiDirDiff;
+    s16 swAdcVal;
+    u16 uwTargetSpeed[2];
+    u16 uwRealSpeed[2];
 
 } st_route_info_t;
 
